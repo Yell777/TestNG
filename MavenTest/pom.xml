@@ -29,10 +29,17 @@
                 <configuration>
                     <locales>ru</locales>
                 </configuration>
-            </plugin>        
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-  
 
   <dependencies>
     <dependency>
@@ -41,5 +48,10 @@
        <version>6.11</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>2.6</version>
+      </dependency>
   </dependencies>
 </project>
