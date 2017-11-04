@@ -28,8 +28,8 @@
       <file leaf-file-name="TestFile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Mike/TestFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+            <state relative-caret-position="88">
+              <caret line="76" column="15" lean-forward="false" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,12 +94,6 @@
               <item name="MavenTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="MavenTest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MavenTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MavenTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MavenTest" type="b2602c69:ProjectViewProjectNode" />
@@ -434,12 +428,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MyTest - 2017.11.03 at 14h 17m 32s.xml">
-      <configuration name="MyTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestFile - 2017.11.03 at 18h 26m 38s.xml">
-      <configuration name="TestFile" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="TestFile - 2017.11.04 at 13h 20m 32s.xml">
       <configuration name="TestFile" configurationId="TestNG" />
     </history-entry>
@@ -462,6 +450,12 @@
       <configuration name="TestFile" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestFile - 2017.11.04 at 14h 15m 17s.xml">
+      <configuration name="TestFile" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestFile - 2017.11.04 at 14h 35m 05s.xml">
+      <configuration name="TestFile" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestFile - 2017.11.04 at 14h 36m 03s.xml">
       <configuration name="TestFile" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -562,8 +556,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Mike/TestFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+        <state relative-caret-position="88">
+          <caret line="76" column="15" lean-forward="false" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,9 +1,7 @@
 package Mike;
 
 import org.apache.commons.io.FileUtils;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +19,7 @@ public class TestFile {
     private static File file;
 
 
-    @BeforeTest
+    @BeforeClass
     public void setupNewDirTemp() {
         try {
             path = Files.createTempDirectory("myFile");
@@ -75,8 +73,8 @@ public class TestFile {
 
 
     }
-    
-    @AfterTest
+
+    @AfterClass
     public void deleteTempDir()  {
         try {
             FileUtils.deleteDirectory(path.toFile());
