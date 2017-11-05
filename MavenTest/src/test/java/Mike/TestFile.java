@@ -19,7 +19,7 @@ public class TestFile {
     private static File file;
 
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setupNewDirTemp() {
         try {
             path = Files.createTempDirectory("myFile");
@@ -28,7 +28,7 @@ public class TestFile {
         }
     }
 
-    @Test
+    @Test(groups = "positive",priority = 1)
     public void TestCreateNewFileTXT() throws IOException {
         String absoluteFilePath = path + "/file.txt";
 
@@ -39,7 +39,7 @@ public class TestFile {
             System.out.println("Файл " + absoluteFilePath + " уже существует");
         }
     }
-    @Test
+    @Test(groups = "positive",priority = 1)
     public void TestCreateFileDoc() throws IOException {
         String absoluteFilePath = path + "/file.doc";
 
@@ -50,7 +50,7 @@ public class TestFile {
             System.out.println("Файл " + absoluteFilePath + " уже существует");
         }
     }
-    @Test
+    @Test(groups = "positive" , priority = 1)
     public void TestNewFileCSV() throws IOException {
         String absoluteFilePath = path + "/file.csv";
 
@@ -61,7 +61,7 @@ public class TestFile {
             System.out.println("Файл " + absoluteFilePath + " уже существует");
         }
     }
-    @Test
+    @Test(groups = "negative", priority = 2)
     public void TestCreateNewFileErorr() throws IOException {
         String absoluteFilePath = null;
         try {
@@ -74,7 +74,7 @@ public class TestFile {
 
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void deleteTempDir()  {
         try {
             FileUtils.deleteDirectory(path.toFile());
