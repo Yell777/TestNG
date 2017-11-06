@@ -54,7 +54,7 @@ public class TestFile {
         Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");
         System.out.println("Файл создан во временной директории :" + file);
     }
-    
+
     @Test(groups = "negative", priority = 2)
     public void TestCreateNewFileErorr() throws IOException {
         String absoluteFilePath = null;
