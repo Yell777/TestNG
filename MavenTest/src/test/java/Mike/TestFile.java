@@ -1,6 +1,7 @@
 package Mike;
 
 import org.apache.commons.io.FileUtils;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -33,40 +34,33 @@ public class TestFile {
         String absoluteFilePath = path + "/file.txt";
 
         file = new File(absoluteFilePath);
-        if (file.createNewFile()) {
-            System.out.println(absoluteFilePath + " Файл создан");
-        } else {
-            System.out.println("Файл " + absoluteFilePath + " уже существует");
-        }
+        Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");
+        System.out.println("Файл создан во временной директории :" + file);
+
     }
     @Test(groups = "positive",priority = 1)
     public void TestCreateFileDoc() throws IOException {
         String absoluteFilePath = path + "/file.doc";
 
         file = new File(absoluteFilePath);
-        if (file.createNewFile()) {
-            System.out.println(absoluteFilePath + " Файл создан");
-        } else {
-            System.out.println("Файл " + absoluteFilePath + " уже существует");
-        }
+        Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");
+        System.out.println("Файл создан во временной директории :" + file);
     }
     @Test(groups = "positive" , priority = 1)
     public void TestNewFileCSV() throws IOException {
         String absoluteFilePath = path + "/file.csv";
 
         file = new File(absoluteFilePath);
-        if (file.createNewFile()) {
-            System.out.println(absoluteFilePath + " Файл создан");
-        } else {
-            System.out.println("Файл " + absoluteFilePath + " уже существует");
-        }
+        Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");
+        System.out.println("Файл создан во временной директории :" + file);
     }
+    
     @Test(groups = "negative", priority = 2)
     public void TestCreateNewFileErorr() throws IOException {
         String absoluteFilePath = null;
         try {
             file = new File(absoluteFilePath);
-            file.createNewFile();
+            Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");
         }catch (Exception e){
             System.out.println(e);
         }
