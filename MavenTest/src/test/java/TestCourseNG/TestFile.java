@@ -32,8 +32,8 @@ public class TestFile extends TestBase {
         System.out.println("Файл создан во временной директории :" + file);
     }
     @Test(groups = "positive" , priority = 1 , dataProviderClass = DataProviders.class, dataProvider = "loadUserFromFile")
-    public void TestNewFileCSV(String nameFile) throws IOException {
-        String absoluteFilePath = path + "/" + nameFile + ".csv";
+    public void TestNewFileCSV(String test) throws IOException {
+        String absoluteFilePath = path + "/" + test + ".csv";
 
         file = new File(absoluteFilePath);
         Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");

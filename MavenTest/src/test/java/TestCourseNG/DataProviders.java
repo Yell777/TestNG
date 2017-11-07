@@ -17,7 +17,7 @@ public class DataProviders {
     @DataProvider
     public static Iterator<Object[]> loadUserFromFile() throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(
-                DataProviders.class.getResourceAsStream("/User.data")));
+                DataProviders.class.getResourceAsStream("/user.data")));
 
         List<Object[]> userData = new ArrayList<>();
         String line = in.readLine();
