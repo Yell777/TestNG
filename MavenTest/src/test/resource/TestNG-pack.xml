@@ -4,15 +4,15 @@
     <test name="TestFile"   >
         <groups >
             <run>
-                <include name  = "positive" ></include>
-                <include name = "negative" ></include>
+                <include name = "positive"></include>
+                <include name = "negative"></include>
             </run>
             <!--<dependencies>-->
                 <!--<group name = "negative" depends-on="positive"></group>-->
             <!--</dependencies>-->
         </groups>
         <packages>
-            <package name="Mike" />
+            <package name="TestCourseNG"/>
         </packages>
     </test>
 </suite>
