@@ -37,10 +37,10 @@ public class FileAssertion extends Assertion {
     }
 
     public void assertIsFileCreate(final String path) {
-        doAssert(new FileAssert("There are no elements located in " + path) {
+        doAssert(new FileAssert("There are no file located in " + path) {
             @Override
             public void doAssert() {
-                assertTrue(new File(path).exists(),"Файл не создан ");
+                assertTrue(new File(path).exists(),getMessage());
             }
         });
     }
