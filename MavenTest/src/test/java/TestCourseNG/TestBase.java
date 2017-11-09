@@ -23,6 +23,7 @@ public class TestBase {
     protected static File file;
     private static Files dir;
 
+
     @BeforeClass(alwaysRun = true)
     public void setupNewDirTemp() {
         try {
@@ -30,6 +31,7 @@ public class TestBase {
         } catch (IOException e) {
             System.out.println("Диреткория не создана ");
         }
+
     }
 
     @AfterClass(alwaysRun = true)
