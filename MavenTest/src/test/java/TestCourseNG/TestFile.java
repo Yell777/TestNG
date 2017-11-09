@@ -41,16 +41,27 @@ public class TestFile extends TestBase {
     }
 
     @Test(groups = "negative", priority = 2)
-    public void TestCreateNewFileErorr() throws IOException {
-        String absoluteFilePath = null;
+    public void TestCreateNewFileErorrIOExp() throws IOException {
+        String absoluteFilePath = "/TestWrong.doc";;
+        file = new File(absoluteFilePath);
         try {
-            file = new File(absoluteFilePath);
             Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");
-        }catch (Exception e){
+        }catch (IOException e){
             System.out.println(e);
         }
-
-
     }
+
+    @Test(groups = "negative", priority = 2)
+    public void TestCreateFalse() throws IOException {
+        String absoluteFilePath = path + "/" + "TESTFALSE" + ".csv";
+        file = new File(absoluteFilePath);
+        file.createNewFile();
+        try {
+            Assert.assertTrue(file.createNewFile(),"Файл уже создан ");
+        }catch (AssertionError e){
+            System.out.println(e);
+        }
+    }
+
 
 }
