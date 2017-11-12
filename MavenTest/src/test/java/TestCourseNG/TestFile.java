@@ -1,5 +1,6 @@
 package TestCourseNG;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -50,11 +51,16 @@ public class TestFile extends TestBase {
     public void TestCreateNewFileErorrIOExp() throws IOException {
         String absoluteFilePath = "/TestWrong.doc";;
         file = new File(absoluteFilePath);
-        try {
-            Assert.assertTrue(file.createNewFile(),"Файл не создан или уже существует");
-        }catch (IOException e){
-            System.out.println(e);
-        }
+             try{
+                 file.createNewFile();
+               Assert.fail("Expected IOException");
+             } catch (IOException thrown) {
+                 Assert.assertNotEquals("", thrown.getMessage());
+             }
+
+
+
+
     }
 
     @Test(groups = "negative", priority = 2)
@@ -62,11 +68,8 @@ public class TestFile extends TestBase {
         String absoluteFilePath = path + "/" + "TESTFALSE" + ".csv";
         file = new File(absoluteFilePath);
         file.createNewFile();
-        try {
-            Assert.assertTrue(file.createNewFile(),"Файл уже создан ");
-        }catch (AssertionError e){
-            System.out.println(e);
-        }
+            Assert.assertFalse(file.createNewFile(),"Файл уже создан ");
+
     }
 
 
