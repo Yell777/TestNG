@@ -58,9 +58,6 @@ public class TestFile extends TestBase {
                  Assert.assertNotEquals("", thrown.getMessage());
              }
 
-
-
-
     }
 
     @Test(groups = "negative", priority = 2)
